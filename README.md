@@ -3,6 +3,8 @@ A shorturl program made in Java EE with servlets.
 
 <h2>Steps for start this program / Passos para startar o programa</h2>
 
+The program is not completed so feel free to add some stuff
+
 1. Download Apache Tomcat Server and add the program in the server.
 2. The database for this program is inside of this repository.
 3. Start the server with the index.jsp opened.
