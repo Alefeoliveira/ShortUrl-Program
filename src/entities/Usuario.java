@@ -1,5 +1,8 @@
 package entities;
 
+/*
+ * Entidade relacionada aos usuarios.
+ * */
 public class Usuario {
 	
 	private Integer id;

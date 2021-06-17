@@ -6,15 +6,19 @@ import java.sql.ResultSet;
 
 import entities.Usuario;
 
-public class UsuarioDAO extends DAO{
+/*
+ * Classe responsavel por receber/enviar/atualizar e deletar informações do usuario.
+ * */
+public class UsuarioDAO extends ConnectionDAO{
 	
-	DAO dao = new DAO();
+	ConnectionDAO dao = new ConnectionDAO();
 	
 	private String getUsuarioByEmail = "select * from tb_usuario where email = ?";
 	private String getUsuarioByid = "select * from tb_usuario where id = ?";
 	
 	private Connection con;
 	
+	//Busca um usuario do banco de dados passando o email como parametro para a busca
 	public Usuario getUsuarioByEmail(String email) {
 		Usuario user = null;
 		try {
@@ -31,6 +35,7 @@ public class UsuarioDAO extends DAO{
 		return user;
 	}
 	
+	//Busca um usuario do banco de dados passando o id como parametro para a busca
 	public Usuario getUsuarioById(Integer id) {
 		Usuario user = null;
 		try {

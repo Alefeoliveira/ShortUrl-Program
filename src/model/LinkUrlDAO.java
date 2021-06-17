@@ -5,15 +5,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
-import controller.Controller;
 import entities.Urls;
 
-public class LinkUrlDAO extends DAO{
+public class LinkUrlDAO extends ConnectionDAO{
 	
-	DAO dao = new DAO();
-	
+	ConnectionDAO dao = new ConnectionDAO();
 	
 	public String insert = "insert into tb_urls(url, url_encurtada, data_url, codigo_usuario) values (?, (SELECT LEFT(MD5(RAND()), 8)), sysdate(), (select id from tb_usuario))";
 	public String findAllUrl = "select * from tb_urls";

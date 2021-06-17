@@ -1,8 +1,10 @@
 package entities;
 
 import java.sql.Date;
-import java.text.SimpleDateFormat;
 
+/*
+ * Entidade relacionada aos links.
+ * */
 public class Urls {
 	
 	private Integer id;

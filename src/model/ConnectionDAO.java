@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DAO {
+public class ConnectionDAO {
 
 	private String driver = "com.mysql.cj.jdbc.Driver";
 	private String url = "jdbc:mysql://localhost/url?useTimezone=true&serverTimezone=UTC";
@@ -26,7 +26,8 @@ public class DAO {
 			return null;
 		}
 	}
-
+	
+	//Abre uma conexão.
 	public Connection getConnection() {
 		try {
 			con = connection();
@@ -39,6 +40,7 @@ public class DAO {
 		
 	}
 	
+	//Fecha a conexão.
 	public void closeConnection(){
 		if(con != null) {
 			try {
