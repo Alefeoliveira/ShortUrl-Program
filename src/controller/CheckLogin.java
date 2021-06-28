@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class CheckLogin {
+	//check login ainda pendente
 	
 	protected void isLogged(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
